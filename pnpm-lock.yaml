@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@slidev/cli': ^0.32.1
+  '@slidev/theme-apple-basic': ^0.20.0
   '@slidev/theme-default': '*'
   '@slidev/theme-seriph': '*'
 
 dependencies:
   '@slidev/cli': 0.32.1
+  '@slidev/theme-apple-basic': 0.20.0
   '@slidev/theme-default': 0.21.2
   '@slidev/theme-seriph': 0.21.2
 
@@ -23,10 +25,25 @@ packages:
     resolution: {integrity: sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==}
     dev: false
 
+  /@babel/helper-validator-identifier/7.16.7:
+    resolution: {integrity: sha512-hsEnFemeiW4D08A5gUAZxLBTXpZ39P+a+DGDsHw1yxqyQ/jzFEnxf5uTEGp+3bzAbNOxU1paTgYS4ECU/IgfDw==}
+    engines: {node: '>=6.9.0'}
+    dev: false
+
   /@babel/parser/7.18.0:
     resolution: {integrity: sha512-AqDccGC+m5O/iUStSJy3DGRIUFu7WbY/CppZYwrEUB4N0tZlnI8CSTsgL7v5fHVFmUbRv2sd+yy27o8Ydt4MGg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.18.0
+    dev: false
+
+  /@babel/types/7.18.0:
+    resolution: {integrity: sha512-vhAmLPAiC8j9K2GnsnLPCIH5wCrPpYIVBCWRBFDCB7Y/BXLqi/O+1RSTTM2bsmg6U/551+FCf9PNPxjABmxHTw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.16.7
+      to-fast-properties: 2.0.0
     dev: false
 
   /@braintree/sanitize-url/6.0.0:
@@ -209,6 +226,16 @@ packages:
     dependencies:
       '@slidev/types': 0.32.1
       js-yaml: 4.1.0
+    dev: false
+
+  /@slidev/theme-apple-basic/0.20.0:
+    resolution: {integrity: sha512-sjgxAyn63TNHsiwT/Iz2D8IjpuOg/x8l+nG2TTH3zg8XChIo7uYcNNApWH+i5zuBfaNHHUOaGLPaZw5s6fINQg==}
+    engines: {node: '>=14.0.0', slidev: '>=0.19.3'}
+    dependencies:
+      '@slidev/types': 0.22.7
+      codemirror-theme-vars: 0.1.1
+      prism-theme-vars: 0.2.3
+      theme-vitesse: 0.1.14
     dev: false
 
   /@slidev/theme-default/0.21.2:
@@ -578,6 +605,8 @@ packages:
       finalhandler: 1.1.2
       parseurl: 1.3.3
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /cross-spawn/7.0.3:
@@ -1080,6 +1109,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: false
@@ -1427,6 +1461,8 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /find-up/5.0.0:
@@ -2160,6 +2196,11 @@ packages:
   /theme-vitesse/0.1.14:
     resolution: {integrity: sha512-b5s+Zpfaw5+djoCJ9AEbcTbpiTlLsOvGM9oblDmmWRGWNqg9oXtEYO/uwubwx77novHBI6zNuwZRHKNlAIBo4A==}
     engines: {vscode: ^1.43.0}
+    dev: false
+
+  /to-fast-properties/2.0.0:
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    engines: {node: '>=4'}
     dev: false
 
   /to-regex-range/5.0.1:
